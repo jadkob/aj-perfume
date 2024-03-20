@@ -371,7 +371,7 @@ function Product({
               />
             </label>
             <label>
-              10
+              10ml
               <input
                 type="radio"
                 value={"15ml"}
