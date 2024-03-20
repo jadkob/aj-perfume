@@ -2,7 +2,7 @@
   display: grid;
   width: 97vw;
   height: 90vh;
-  grid-template-columns: repeat(auto-fit, minmax(200px, .2fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr));
   gap: 7vw;
   /* Adjust gap for responsiveness */
   align-items: center;
@@ -32,7 +32,7 @@
   display: grid;
   width: 97vw;
   height: 90vh;
-  grid-template-columns: repeat(auto-fit, minmax(200px, .2fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr));
   gap: 7vw;
   /* Adjust gap for responsiveness */
   align-items: center;
@@ -66,7 +66,9 @@
     width: 40vw;
   }
 }
-a, button, input {
+a,
+button,
+input {
   background-color: white;
   transition: all 100ms ease-in-out;
   width: fit-content;
@@ -171,13 +173,33 @@ html {
 .cart-product img {
   width: 20vw;
 }
-.cart-product button{
+.cart-product button {
   margin-bottom: 4vh;
 }
-a:hover, button:hover, input:hover {
+a:hover,
+button:hover,
+input:hover {
   background-color: black;
   color: white;
 }
 input:hover::placeholder {
   color: white;
+}
+#inputs {
+  margin-bottom: 5vh;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.title {
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 3rem;
 }
