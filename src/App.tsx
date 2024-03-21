@@ -17,6 +17,7 @@ import "./index.css";
 import React, { useEffect, useState } from "react";
 import { v4 } from "uuid";
 import axios from "axios";
+import { Analytics } from "@vercel/analytics/react";
 
 interface Product {
   name: string;
@@ -180,6 +181,7 @@ export default function App() {
   ];
   return (
     <BrowserRouter>
+      <Analytics />
       <Nav />
       <Routes>
         <Route path="/" element={<Home products={products} />} />
